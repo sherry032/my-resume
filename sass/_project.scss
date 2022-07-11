@@ -1,0 +1,30 @@
+.project{
+    box-shadow: 0 1.5rem 3rem rgba($color: #000000, $alpha: .3);
+    background-color: var(--main-blue-dark);
+    padding-bottom: 1.5rem;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all .3s;
+    flex: 0 0 35rem;
+    &-image{
+        max-width: 100%;
+        height: auto;
+    }
+    &-title{
+        color: var(--main-white);
+    }
+    &:link,
+    &:visited{
+        text-decoration: none;
+        font-size: 2rem;
+        text-align: center;
+        
+    }
+
+    &:hover,
+    &:active{
+        transform: translateY(-8px);
+    
+    }
+    
+}

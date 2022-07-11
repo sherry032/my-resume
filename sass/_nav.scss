@@ -1,0 +1,29 @@
+.nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    &__items{
+        background-color: var(--main-red);
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__link{
+        &:link,
+        &:visited{
+            text-decoration: none;
+            display: block;
+            padding: 3rem 3rem;
+            font-size: 2rem;
+            color: var(--main-white);
+        }
+        &:hover,
+        &:active{
+            background-color: var(--main-blue);
+        }
+
+    }
+}
