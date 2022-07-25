@@ -16,8 +16,8 @@
     padding: 15rem 5rem;
     overflow: hidden;
     &-grid{
-        @include flex-center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         gap: 5rem;
         }
 }

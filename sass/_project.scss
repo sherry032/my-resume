@@ -5,7 +5,7 @@
     border-radius: 3px;
     overflow: hidden;
     transition: all .3s;
-    flex: 0 0 35rem;
+    grid-column: span 2;
     &-image{
         max-width: 100%;
         height: auto;
@@ -27,4 +27,8 @@
     
     }
     
+}
+
+.main-project {
+    grid-column: 1 / -1;
 }
