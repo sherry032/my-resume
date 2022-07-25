@@ -9,17 +9,23 @@
 }
 
 .section-projects{
-    @include flex-center;
-    flex-direction: column;
-    gap: 3rem;
     background-color: var(--main-blue);
-    padding: 15rem 5rem;
-    overflow: hidden;
+
+    &-container{
+        max-width: 120rem;
+        padding: 15rem 5rem;
+        overflow: hidden;
+        @include flex-center;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 0 auto;
+    }
     &-grid{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 5rem;
         }
+
 }
 
 .section-work{
