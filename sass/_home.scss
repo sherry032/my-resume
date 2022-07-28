@@ -6,6 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small){
+        height: 60vh;
+    }
 }
 
 .section-projects{
@@ -46,6 +50,11 @@
     margin: 0 auto;
     background-color: var(--main-blue-dark);
     height: 90vh;
+
+    @media only screen and (max-width: $bp-small){
+        padding: 5rem 3rem;
+        height: 50vh;
+    }
 }
 
 .section-education{
