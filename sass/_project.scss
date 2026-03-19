@@ -1,48 +1,84 @@
-.project{
-    box-shadow: 0 1.5rem 3rem rgba($color: #000000, $alpha: .3);
-    background-color: var(--main-blue-dark);
-    padding-bottom: 1.5rem;
-    border-radius: 3px;
+// =========================================
+// PROJECT CARDS
+// =========================================
+.project-card {
+    display: block;
+    text-decoration: none;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     overflow: hidden;
-    transition: all .3s;
-    grid-column: span 2;
+    transition: var(--transition);
 
-    @media only screen and (max-width: $bp-medium){
-        grid-column: span 1;
+    &:hover {
+        border-color: var(--border-accent);
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+        .project-card__overlay {
+            opacity: 1;
+        }
+
+        .project-card__image {
+            transform: scale(1.06);
+        }
     }
 
-    &-image{
-        max-width: 100%;
-        height: auto;
-
-        
-    }
-    &-title{
-        color: var(--main-white);
-    }
-    &:link,
-    &:visited{
-        text-decoration: none;
-        font-size: 2rem;
-        text-align: center;
-        
+    &__image-wrap {
+        position: relative;
+        overflow: hidden;
     }
 
-    &:hover,
-    &:active{
-        transform: translateY(-8px);
-    
+    &__image {
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
     }
 
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(10, 15, 30, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: var(--transition);
 
-    
+        span {
+            color: var(--accent-primary);
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            i {
+                margin-left: 0.6rem;
+            }
+        }
+    }
+
+    &__body {
+        padding: 2rem 2.5rem 2.5rem;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        color: var(--text-secondary);
+        line-height: 1.75;
+        margin-bottom: 1.8rem;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
 }
-
-.main-project {
-    grid-column: span 3;
-
-    @media only screen and (max-width: $bp-medium){
-        grid-column: span 1;
-    }
-}
-

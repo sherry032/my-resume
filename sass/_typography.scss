@@ -1,43 +1,81 @@
-.heading-primary{
+// =========================================
+// SHARED TEXT & UI ELEMENTS
+// =========================================
+
+.section-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    &--main{
-        font-size: 6rem;
-        font-weight: 700;
-        animation: moveInLeft 2s ease-out;
-    }
-    &--sub{
-        font-weight: 200;
-        font-style: italic;
-        font-size: 3rem;
-        color: var(--main-red);
-        animation: moveInRight 2s ease-out;
-    }
-}
 
-.heading-secondary{
-        text-transform: uppercase;
-        font-size: 3.5rem;
-        margin-bottom: 3rem;
-        border-bottom: 5px solid currentColor;
-        text-align: center;
-}
-
-.heading-tertiary{
-    text-align: center;
-    &-main{
+    &::after {
+        content: '';
         display: block;
-        font-size: 2.5rem;
-    }
-    &-sub{
-        display: block;
-        font-size: 2rem;
+        width: 5rem;
+        height: 3px;
+        background-color: var(--accent-primary);
+        margin: 1.5rem auto 0;
+        border-radius: 2px;
     }
 }
 
-.p-text{
-    font-size: 1.6rem;
+// =========================================
+// BUTTONS
+// =========================================
+.btn {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: $font-primary;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+
+    &-primary {
+        background-color: var(--accent-primary);
+        color: var(--bg-primary);
+
+        &:hover {
+            background-color: rgba(100, 255, 218, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+        }
+    }
+
+    &-outline {
+        border: 1px solid var(--accent-primary);
+        color: var(--accent-primary);
+
+        &:hover {
+            background-color: var(--accent-glow);
+            transform: translateY(-3px);
+        }
+    }
+}
+
+// =========================================
+// TAGS
+// =========================================
+.tech-tag {
+    font-family: $font-code;
+    font-size: 1.25rem;
+    color: var(--accent-primary);
+    background-color: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+}
+
+.tag {
+    font-family: $font-code;
+    font-size: 1.1rem;
+    color: var(--accent-primary);
+    background-color: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    padding: 0.3rem 0.9rem;
+    border-radius: 4px;
 }

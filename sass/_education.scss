@@ -1,8 +1,169 @@
-.education{
-    
-    &-text{
-        text-align: center;
-        font-size: 2.5rem;
+// =========================================
+// SHARED MODIFIER
+// =========================================
+.section-title--mt {
+    margin-top: 8rem;
+}
 
+// =========================================
+// EDUCATION CARD
+// =========================================
+.education-card {
+    max-width: 72rem;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4rem 4.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 3.5rem;
+    transition: var(--transition);
+
+    &:hover {
+        border-color: var(--border-accent);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: var(--accent-primary);
+        flex-shrink: 0;
+        margin-top: 0.5rem;
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__degree {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.6rem;
+    }
+
+    &__major {
+        font-size: 1.6rem;
+        color: var(--accent-primary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__school {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.6rem;
+    }
+
+    &__location {
+        font-size: 1.4rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+
+        i {
+            margin-right: 0.6rem;
+        }
+    }
+
+    &__period {
+        font-family: $font-code;
+        font-size: 1.3rem;
+        color: var(--accent-primary);
+        background-color: var(--accent-glow);
+        border: 1px solid var(--border-accent);
+        padding: 0.4rem 1.2rem;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 2.5rem;
+
+        &__icon {
+            font-size: 5rem;
+        }
+    }
+}
+
+// =========================================
+// CERTIFICATIONS GRID
+// =========================================
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cert-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    transition: var(--transition);
+
+    &:hover {
+        border-color: var(--border-accent);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    &__icon {
+        font-size: 2.8rem;
+        color: var(--accent-primary);
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+
+    &__sub {
+        font-size: 1.3rem;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__source {
+        font-family: $font-code;
+        font-size: 1.2rem;
+        color: var(--accent-primary);
+        background-color: var(--accent-glow);
+        border: 1px solid var(--border-accent);
+        padding: 0.2rem 0.8rem;
+        border-radius: 4px;
+    }
+
+    &__date {
+        font-family: $font-code;
+        font-size: 1.2rem;
+        color: var(--text-muted);
     }
 }

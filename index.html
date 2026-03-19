@@ -5,115 +5,485 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/898f483647.js" crossorigin="anonymous"></script>
-    <!-- <link rel="icon" type="image/png" href=""/> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sass/main.scss">
-    <title>Sherry's resume</title>
+    <title>Sherry Li — Senior React / Next.js Developer</title>
 </head>
 <body>
-    <!---------------- intro ------------->
-        <nav class="nav">
-            <ul class="nav__items">
-                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav__brand">
+            <span class="nav__logo">&lt;SL /&gt;</span>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav__items" id="navMenu">
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
+            <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="section-about" id="about">
-            <h1 class="heading-primary">
-                <span class="heading-primary--main">Hey I am Sherry</span>
-                <span class="heading-primary--sub">a web developer</span>
-            </h1>
-        </section>
 
-        <section class="section-projects" id="projects">
-          <div class="section-projects-container">
-            <h2 class="heading-secondary">These are some of my projects</h2>
-            <div class="section-projects-grid">
-                <a href="https://www.lifetimefashion.store/" class="project main-project">
-                    <img src="./img/project-7-lifetime-fashion.jpg" alt="project" class="project-image">
-                    <p class="project-title">Lifetime Fashion - Next JS</p>
-                </a>
-                <a href="https://nextjs-crwn-clothing-silk.vercel.app" class="project main-project">
-                    <img src="./img/project-8-nextjs-events.jpg" alt="project" class="project-image">
-                    <p class="project-title">NextEvents - Next JS</p>
-                </a>
-                <a href="https://food-order-app-green.vercel.app/" class="project">
-                    <img src="./img/project-6-food-order-app.jpg" alt="project" class="project-image">
-                    <p class="project-title">Food order app</p>
-                </a>
-                <a href="https://forkify-react-version.vercel.app/" class="project">
-                    <img src="./img/project-5-forkify.jpg" alt="project" class="project-image">
-                    <p class="project-title">Forkify food app - React Version</p>
-                </a>
-                <a href="https://bankist-two.vercel.app/" class="project">
-                    <img src="./img/project-4-bankist.jpg" alt="project" class="project-image">
-                    <p class="project-title">Bankist</p>
-                </a>
-                <a href="https://natours-ten-mu.vercel.app/" class="project">
-                    <img src="./img/project-1-Natours.jpg" alt="project" class="project-image">
-                    <p class="project-title">Natours</p>
-                </a>
-                <a href="https://nexter-tau.vercel.app/" class="project">
-                    <img src="./img/project-2-nexter.jpg" alt="project" class="project-image">
-                    <p class="project-title">Nexter</p>
-                </a>
-                <a href="https://trillo-beryl.vercel.app/" class="project">
-                    <img src="./img/project-3-Trillo.jpg" alt="project" class="project-image">
-                    <p class="project-title">Trillo</p>
-                </a>
+        <!-- Hero Section -->
+        <section class="section-hero" id="about">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name">Sherry Li.</h1>
+                <h2 class="hero-title">Senior React / Next.js Developer</h2>
+                <p class="hero-bio">
+                    Senior front-end developer with 15+ years of experience building high-performance,
+                    user-centric web applications with React and Next.js. Expert in AI-assisted development
+                    workflows — leveraging Cursor, Claude Code, and Figma MCP Server to ship faster and smarter.
+                    Deep expertise in modern state management, ADA accessibility, SEO optimization, and Agile delivery.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Redux Toolkit</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">AI-First Workflow</span>
+                </div>
             </div>
-          </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
         </section>
 
+        <!-- Skills Section -->
+        <section class="section-skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Frontend & Frameworks</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fa-brands fa-react"></i> React</li>
+                            <li class="skill-item"><i class="fa-solid fa-layer-group"></i> Next.js (SSR / SSG)</li>
+                            <li class="skill-item"><i class="fa-solid fa-code"></i> TypeScript</li>
+                            <li class="skill-item"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
+                            <li class="skill-item"><i class="fa-solid fa-store"></i> Redux Toolkit / RTK Query</li>
+                            <li class="skill-item"><i class="fa-solid fa-rotate"></i> React Query</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Styling & UI</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fa-solid fa-wind"></i> Tailwind CSS</li>
+                            <li class="skill-item"><i class="fa-solid fa-palette"></i> Material UI (MUI)</li>
+                            <li class="skill-item"><i class="fa-brands fa-css3-alt"></i> SCSS / CSS3</li>
+                            <li class="skill-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Framer Motion</li>
+                            <li class="skill-item"><i class="fa-solid fa-book-open"></i> Storybook</li>
+                            <li class="skill-item"><i class="fa-solid fa-universal-access"></i> ADA / Accessibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Testing, Tools & AI</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fa-solid fa-flask"></i> Jest / RTL / MSW</li>
+                            <li class="skill-item"><i class="fa-solid fa-vial-circle-check"></i> Cypress (E2E)</li>
+                            <li class="skill-item"><i class="fa-solid fa-shield-halved"></i> SonarQube / CI-CD</li>
+                            <li class="skill-item"><i class="fa-solid fa-robot"></i> Cursor + Claude Code</li>
+                            <li class="skill-item"><i class="fa-solid fa-pen-nib"></i> Figma MCP Server</li>
+                            <li class="skill-item"><i class="fa-brands fa-aws"></i> AWS / Azure</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+
+                    <a href="https://www.lifetimefashion.store/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-7-lifetime-fashion.jpg" alt="Lifetime Fashion" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Lifetime Fashion</h3>
+                            <p class="project-card__desc">Full-stack e-commerce platform with product listings, cart management, and a complete checkout flow.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">SCSS</span>
+                                <span class="tag">E-commerce</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://nextjs-crwn-clothing-silk.vercel.app" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-8-nextjs-events.jpg" alt="NextEvents" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">NextEvents</h3>
+                            <p class="project-card__desc">Event discovery and management app using Next.js with server-side rendering and dynamic routing.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">SSR</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://food-order-app-green.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-6-food-order-app.jpg" alt="Food Order App" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Food Order App</h3>
+                            <p class="project-card__desc">React food ordering app with cart management, modal UI, and order processing using Context API.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Hooks</span>
+                                <span class="tag">Context API</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://forkify-react-version.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-5-forkify.jpg" alt="Forkify React" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Forkify (React)</h3>
+                            <p class="project-card__desc">Recipe search app integrated with a third-party API. Supports bookmarks and custom recipe creation.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://bankist-two.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-4-bankist.jpg" alt="Bankist" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Bankist</h3>
+                            <p class="project-card__desc">Modern banking UI with login, transfers, loans, and account management built in vanilla JavaScript.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">DOM</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://natours-ten-mu.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-1-Natours.jpg" alt="Natours" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Natours</h3>
+                            <p class="project-card__desc">Tour booking landing page with advanced CSS animations, custom clip-paths, and fully responsive layout.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">SCSS</span>
+                                <span class="tag">Animations</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://nexter-tau.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-2-nexter.jpg" alt="Nexter" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Nexter</h3>
+                            <p class="project-card__desc">Real estate website showcasing advanced CSS Grid layout techniques with a modern, editorial design.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">SCSS</span>
+                                <span class="tag">HTML5</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://trillo-beryl.vercel.app/" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-card__image-wrap">
+                            <img src="./img/project-3-Trillo.jpg" alt="Trillo" class="project-card__image">
+                            <div class="project-card__overlay">
+                                <span>View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Trillo</h3>
+                            <p class="project-card__desc">Hotel booking app UI built entirely with Flexbox, featuring responsive navigation and SVG icons.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">SCSS</span>
+                                <span class="tag">SVG</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
         <section class="section-work" id="work">
-            <h2 class="heading-secondary">Work experience</h2>
-            <h3 class="heading-tertiary">
-                <span class="heading-tertiary-main">E-commerce manager</span>
-                <span class="heading-tertiary-sub">2015 &hyphen; 2022 Lifetime fashion Inc</span>
-            </h3>
-            <p class="p-text">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
 
-            </p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Senior React / Next.js Developer</h3>
+                                <span class="timeline-period">May 2024 &ndash; Mar 2026</span>
+                            </div>
+                            <p class="timeline-company">Nous Infosystems &mdash; <em>Client: inKind</em></p>
+                            <p class="timeline-context">Hospitality technology platform connecting diners with restaurant experiences.</p>
+                            <ul class="timeline-details">
+                                <li><strong>AI-First Workflow:</strong> Pioneered use of Cursor and Claude Code to generate, refactor, and review code — significantly reducing implementation time and improving consistency.</li>
+                                <li><strong>Figma MCP Server:</strong> Integrated Figma MCP into the AI dev environment, enabling auto-generation of pixel-perfect, ADA-compliant React components from designs.</li>
+                                <li><strong>React / Next.js:</strong> Built SEO-optimized apps with SSR/SSG; developed responsive, accessible UIs with Tailwind CSS; built reusable component libraries documented in Storybook.</li>
+                                <li><strong>State & API:</strong> Integrated RESTful APIs and GraphQL with Redux Toolkit and React Query; collaborated to optimize and deprecate redundant API calls.</li>
+                                <li><strong>Quality:</strong> Enforced code quality with SonarQube in CI/CD; led code reviews and Agile ceremonies.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Web Developer</h3>
+                                <span class="timeline-period">Nov 2023 &ndash; Jan 2024</span>
+                            </div>
+                            <p class="timeline-company">Triune Infomatics &mdash; <em>Client: Deloitte / HBCUv</em></p>
+                            <p class="timeline-context">Accessibility-focused educational platform.</p>
+                            <ul class="timeline-details">
+                                <li>Built Next.js SPA with full ADA compliance using Material UI (MUI).</li>
+                                <li>Owned features end-to-end, delivering high-quality output on tight timelines.</li>
+                                <li>Implemented animated UI with Framer Motion; applied SEO best practices throughout.</li>
+                                <li>Wrote Cypress E2E tests; built reusable React component libraries shared across the team.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Technology Lead</h3>
+                                <span class="timeline-period">Dec 2022 &ndash; Sep 2023</span>
+                            </div>
+                            <p class="timeline-company">Infosys Limited</p>
+                            <p class="timeline-context">Financial Advisor platform for client onboarding, fund orders, and portfolio management.</p>
+                            <ul class="timeline-details">
+                                <li>Led migration of legacy website to React with TypeScript and Redux Toolkit.</li>
+                                <li>Integrated Highcharts for dynamic graphs and charts per business requirements.</li>
+                                <li>Developed reusable UI components (Button, Input, Modal, sortable/filterable Table) to accelerate team delivery.</li>
+                                <li>Implemented comprehensive unit and integration tests with Jest, React Testing Library, and MSW.</li>
+                                <li>Optimized API calls with backend engineers; implemented AJAX/JSON interactions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Web Developer</h3>
+                                <span class="timeline-period">Mar 2015 &ndash; Dec 2022</span>
+                            </div>
+                            <p class="timeline-company">Lifetime Fashion Inc., NY</p>
+                            <ul class="timeline-details">
+                                <li>Built large-scale SPAs with React / Next.js / Redux architecture, TypeScript, and MVC patterns.</li>
+                                <li>Created stable, reusable React components and utility functions for use across products.</li>
+                                <li>Maintained cross-browser compatibility and responsive design standards.</li>
+                                <li>Followed Agile/Scrum with JIRA; performed code reviews and GitHub PR management.</li>
+                                <li>Worked with AWS and Azure cloud platforms.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">eCommerce Manager</h3>
+                                <span class="timeline-period">Sep 2006 &ndash; Apr 2015</span>
+                            </div>
+                            <p class="timeline-company">Changzhou Summitex Textile Co. Ltd.</p>
+                            <p class="timeline-context">Leading garment manufacturer in the APAC region — Supply Chain Dashboard for omnichannel warehouse and inventory management.</p>
+                            <ul class="timeline-details">
+                                <li>Used JavaScript for client-side scripting to reduce server trips and improve response times.</li>
+                                <li>Conducted sales analysis on product performance: reviewed sales, markdowns, and on-hand inventory.</li>
+                                <li>Created targeted campaigns, assortment plans, and stock orders based on sales goals and trends.</li>
+                                <li>Reviewed email campaign performance including open rates, conversion, and sales impact.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
+        <!-- Education & Certifications Section -->
         <section class="section-education" id="education">
-            <h2 class="heading-secondary">Education</h2>
-            <h3 class="heading-tertiary">
-                <span class="heading-tertiary-main">English for Science and Technology</span>
-                <span class="heading-tertiary-sub">Bachelor of Arts</span>
-            </h3>
-            <p class="education-text">Nanjing University of Science and Technology, Nanjing, China</p>
-            <p class="education-text">2002 &hyphen; 2006</p>
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card">
+                    <div class="education-card__icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-card__body">
+                        <h3 class="education-card__degree">Bachelor of Arts</h3>
+                        <p class="education-card__major">English for Science and Technology</p>
+                        <p class="education-card__school">Nanjing University of Science and Technology</p>
+                        <p class="education-card__location">
+                            <i class="fa-solid fa-location-dot"></i> Nanjing, China
+                        </p>
+                        <span class="education-card__period">Jul 2006</span>
+                    </div>
+                </div>
 
+                <h2 class="section-title section-title--mt">Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-card__icon"><i class="fa-brands fa-react"></i></div>
+                        <div class="cert-card__body">
+                            <p class="cert-card__title">React – The Complete Guide</p>
+                            <p class="cert-card__sub">Hooks, React Router, Redux</p>
+                            <div class="cert-card__footer">
+                                <span class="cert-card__source">Udemy</span>
+                                <span class="cert-card__date">Jul 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-card__icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <div class="cert-card__body">
+                            <p class="cert-card__title">Advanced CSS and Sass</p>
+                            <p class="cert-card__sub">Flexbox, Grid, Animations and More</p>
+                            <div class="cert-card__footer">
+                                <span class="cert-card__source">Udemy</span>
+                                <span class="cert-card__date">May 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-card__icon"><i class="fa-brands fa-js"></i></div>
+                        <div class="cert-card__body">
+                            <p class="cert-card__title">The Complete JavaScript Course</p>
+                            <p class="cert-card__sub">Modern JS from the Beginning</p>
+                            <div class="cert-card__footer">
+                                <span class="cert-card__source">Udemy</span>
+                                <span class="cert-card__date">Apr 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-card__icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="cert-card__body">
+                            <p class="cert-card__title">Next.js &amp; React – The Complete Guide</p>
+                            <p class="cert-card__sub">App Router &amp; Pages Router</p>
+                            <div class="cert-card__footer">
+                                <span class="cert-card__source">Udemy</span>
+                                <span class="cert-card__date">Apr 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Contact Section -->
         <section class="section-contact" id="contact">
-            <h2 class="heading-secondary">Let's work together...</h2>
-            <ul class="contact-links">
-                <!-- <li><a href="#" class="contact-link">
-                    <i class="fa-brands fa-facebook"></i>
-                    Facebook
-                </a></li> -->
-                <li><a href="https://github.com/sherry032" class="contact-link">
-                    <i class="fa-brands fa-github"></i>
-                    Github
-                </a></li>
-                <li><a href="mailto:gemini2100@gmail.com" class="contact-link">
-                    <i class="fa-solid fa-at"></i>
-                    Send a email
-                </a></li>
-                <li><a href="tel:917-361-2607" class="contact-link">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    Call me
-                </a></li>
-            </ul>
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-text">
+                    Open to new opportunities — feel free to reach out via any channel below.
+                </p>
+                <ul class="contact-links">
+                    <li>
+                        <a href="https://github.com/sherry032" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:gemini2100@gmail.com" class="contact-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>gemini2100@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:917-361-2607" class="contact-link">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>917-361-2607</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://sherry.codes" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>sherry.codes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p class="footer-text">&copy; Created by Sherry</p>
+        <div class="footer__content">
+            <span class="footer__logo">&lt;SL /&gt;</span>
+            <p class="footer__text">Designed &amp; Built by Sherry Li</p>
+            <p class="footer__copy">&copy; 2026 All rights reserved</p>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

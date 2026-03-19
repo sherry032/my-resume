@@ -1,100 +1,133 @@
-// COLOR VARIABLES
-$color-primary: #655754;
-$color-primary-dark: #141111;
+// =========================================
+// VARIABLES
+// =========================================
 
-$color-secondary: #4A4E69;
+// Breakpoints
+$bp-largest: 75em;   // 1200px
+$bp-large:   62.5em; // 1000px
+$bp-medium:  50em;   // 800px
+$bp-small:   37.5em; // 600px
 
-$color-tertiary: #101d2c;
+// Fonts
+$font-primary: 'Inter', sans-serif;
+$font-code:    'Fira Code', monospace;
 
-$color-grey-light-1: #faf7f6;
-$color-grey-light-2: #e9dedc;
+// =========================================
+// CSS CUSTOM PROPERTIES
+// =========================================
+:root {
+    // Backgrounds
+    --bg-primary:   #0a0f1e;
+    --bg-secondary: #0f172a;
+    --bg-card:      #1e293b;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+    // Accents
+    --accent-primary:   #64ffda;
+    --accent-secondary: #6366f1;
+    --accent-glow:      rgba(100, 255, 218, 0.1);
 
+    // Text
+    --text-primary:   #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted:     #64748b;
 
+    // Borders
+    --border:        rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(100, 255, 218, 0.3);
+
+    // Layout
+    --nav-height: 7rem;
+    --transition: all 0.3s ease;
+}
+
+// =========================================
+// MIXINS
+// =========================================
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-$bp-largest: 75em;  //1200px
-$bp-large: 62.5em;  //1000px
-$bp-medium: 50em;  //800px
-$bp-small: 37.5em;  //600px
-
-// FONT VARIABLES
-$font-primary: 'Raleway', sans-serif;;
-$font-display: 'Josefin Sans', sans-serif;
-
-:root{
-    --main-white:#f0f0f0;
-    --main-red: #be3144;
-    --main-blue: #45567d;
-    --main-blue-dark:#29344b;
-    --main-grey:#303841;
-    --main-black: #000;
-}
-
+// =========================================
+// RESET & BASE
+// =========================================
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-}
-
-html{
     box-sizing: border-box;
-    font-size: 62.5%;
-    @media only screen and (max-width: $bp-medium){
-        font-size: 50%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 56.25%; // 1rem = 9px
     }
 
-    @media only screen and (max-width: $bp-small){
-        font-size: 43.75%;
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50%; // 1rem = 8px
     }
 }
 
-body{
+body {
     font-family: $font-primary;
-    color: var(--main-white);
-    font-weight: 300;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-weight: 400;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.mb-medium{
-    margin-bottom: 4rem !important;
-}
+// =========================================
+// CONTAINER
+// =========================================
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem;
 
-@keyframes moveInLeft{
-    0%{
-    opacity: 0;
-    transform: translateX(-10rem);
-    }
-
-    80%{
-        transform: translateX(1rem);    
-    }
-
-    100%{
-    opacity: 1;
-    transform: translate(0);
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 2rem;
     }
 }
-@keyframes moveInRight{
-    0%{
-    opacity: 0;
-    transform: translateX(10rem);
-    }
 
-    80%{
-        transform: translateX(-1rem);    
+// =========================================
+// ANIMATIONS
+// =========================================
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    100%{
-    opacity: 1;
-    transform: translate(0);
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(1rem);
+        opacity: 0.4;
     }
 }
