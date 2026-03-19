@@ -9,6 +9,9 @@
   },
   "author": "Sherry",
   "license": "ISC",
+  "engines": {
+    "node": ">=20.x"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
     "parcel": "^2.5.0"
