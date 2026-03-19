@@ -47,6 +47,9 @@ window.addEventListener('scroll', () => {
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
 
+// Highlight the nav link whose section occupies the middle of the viewport.
+// rootMargin shrinks the detection zone to a horizontal band near the top,
+// so even very tall sections (like Experience) trigger correctly.
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -59,6 +62,9 @@ const observer = new IntersectionObserver((entries) => {
             });
         }
     });
-}, { threshold: 0.4 });
+}, {
+    threshold: 0,
+    rootMargin: '-30% 0px -65% 0px'
+});
 
 sections.forEach(section => observer.observe(section));
